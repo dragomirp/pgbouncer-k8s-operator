@@ -8,6 +8,15 @@
       "matchPackageNames": ["pydantic"],
       "allowedVersions": "<2.0.0"
     },
+    // Disable Python updates
+    // (Python version should be updated when Ubuntu version is updated)
+    {
+      "matchManagers": ["poetry"],
+      // Renovate uses "dependencies" instead of "main" for top-level dependency group
+      "matchDepTypes": ["dependencies"],
+      "matchDepNames": ["python"],
+      "enabled": false
+    },
     {
       "matchManagers": ["regex"],
       "matchDepNames": ["juju"],
