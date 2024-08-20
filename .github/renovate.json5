@@ -18,14 +18,15 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
+      "fileMatch": ["^metadata\\.yaml$"],
+
       "matchStrings": [
         "upstream-source: (?<depName>.*)@(?<currentValue>.*) +# renovate: oci-image"
       ],
       "datasourceTemplate": "docker"
     },
     {
-      "fileMatch": ["^metadata\\.yaml$"],
+      "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],      
       "matchStrings": [
         "(libjuju: )==(?<currentValue>.*?) +# renovate: latest libjuju 2"
       ],
