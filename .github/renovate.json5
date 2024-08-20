@@ -20,11 +20,18 @@
     {
       "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
       "matchStrings": [
+        "upstream-source: (?<depName>.*)@(?<currentValue>.*) +# renovate: oci-image"
+      ],
+      "datasourceTemplate": "docker"
+    },
+    {
+      "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],
+      "matchStrings": [
         "(libjuju: )==(?<currentValue>.*?) +# renovate: latest libjuju 2"
       ],
       "depNameTemplate": "juju",
       "datasourceTemplate": "pypi",
       "versioningTemplate": "loose"
-    }
+    },
   ]
 }
