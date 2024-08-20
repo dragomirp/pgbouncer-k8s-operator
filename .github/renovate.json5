@@ -28,8 +28,7 @@
       "matchStrings": [
         "upstream-source: (?<depName>.*)@(?<currentValue>sha256:[0-9a-f]*) +# renovate: oci-image"
       ],
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "docker"
+      "datasourceTemplate": "docker"
     },
     {
       "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],      
