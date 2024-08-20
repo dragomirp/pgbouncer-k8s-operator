@@ -26,7 +26,7 @@
       "fileMatch": ["^metadata\\.yaml$"],
 
       "matchStrings": [
-        "upstream-source: (?<depName>.*)@(?<currentValue>.*) +# renovate: oci-image"
+        "upstream-source: (?<depName>.*)@(?<currentValue>sha256:[0-9a-f]*) +# renovate: oci-image"
       ],
       "datasourceTemplate": "docker",
       "versioningTemplate": "docker"
