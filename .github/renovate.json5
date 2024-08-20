@@ -14,6 +14,11 @@
       "matchDatasources": ["pypi"],
       "allowedVersions": "<3",
       "groupName": "Juju agents"
+    },
+    {
+      "matchManagers": ["regex"],
+      "matchDatasources": ["docker"],
+      "pinDigests": true
     }
   ],
   "regexManagers": [
@@ -23,7 +28,8 @@
       "matchStrings": [
         "upstream-source: (?<depName>.*)@(?<currentValue>.*) +# renovate: oci-image"
       ],
-      "datasourceTemplate": "docker"
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "docker"
     },
     {
       "fileMatch": ["^\\.github/workflows/[^/]+\\.ya?ml$"],      
